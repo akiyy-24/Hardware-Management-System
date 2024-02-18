@@ -107,6 +107,7 @@ namespace Hardware_Management_System
                 int Item_ID = Convert.ToInt32(txtitemid.Text);
                 new ItemDB().Dealer_Delete(Item_ID);
                 MessageBox.Show("deleted");
+                RefreshDataGridView();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
